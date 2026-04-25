@@ -71,7 +71,7 @@ O simulador gera valores entre **0.1 e 45.1 m/s²**. O limite configurável padr
 
 **1. Clone o repositório**
 ```bash
-git clone https://github.com/SEU_USUARIO/SIMI_SistemaIntegradoDeMonitoramentoIndustrial.git
+git clone https://github.com/0001081973-lgtm/ApiSensorIOT
 cd SIMI_SistemaIntegradoDeMonitoramentoIndustrial
 ```
 
@@ -79,7 +79,7 @@ cd SIMI_SistemaIntegradoDeMonitoramentoIndustrial
 ```bash
 cd ApiProcessamento
 dotnet run
-# Swagger disponível em: http://localhost:5000
+# Swagger disponível em: http://localhost:58201
 ```
 
 **3. Inicie o Simulador** (em outro terminal)
@@ -111,13 +111,6 @@ dotnet run
 
 ---
 
-## Documentação da API
-
-**Base URL:** `https://localhost:7205`  
-**Swagger UI:** `http://localhost:5000` (abre diretamente na raiz)  
-**Content-Type:** `application/json`
-
----
 
 ### Modelo de Dados — `SensorData`
 
@@ -352,30 +345,30 @@ Persiste **todos os registros recebidos da API** usando `INSERT OR IGNORE` para 
 ```
 SIMI_SistemaIntegradoDeMonitoramentoIndustrial/
 │
-├── Shared/                         # Modelo compartilhado
-│   ├── SensorData.cs               # Entidade principal com 4 sinais
+├── Shared/                         
+│   ├── SensorData.cs               
 │   └── Shared.csproj
 │
-├── ApiProcessamento/               # ASP.NET Core Web API
+├── ApiProcessamento/              
 │   ├── Config/
-│   │   └── ApiConfig.cs            # Limites configuráveis
+│   │   └── ApiConfig.cs            
 │   ├── Controllers/
-│   │   └── SensorController.cs     # 5 endpoints REST documentados
+│   │   └── SensorController.cs     
 │   ├── Data/
-│   │   └── SensorDbContext.cs      # EF Core DbContext (SQLite)
-│   ├── Program.cs                  # Configuração DI + Swagger + EF
+│   │   └── SensorDbContext.cs      
+│   ├── Program.cs                  
 │   ├── appsettings.json
 │   └── ApiProcessamento.csproj
 │
-├── SensorSimulator/                # Console App — gerador de dados
-│   ├── Program.cs                  # Loop de geração + persistência local
+├── SensorSimulator/                
+│   ├── Program.cs                  
 │   └── SensorSimulator.csproj
 │
-├── SensorInterface/                # WPF Desktop App
+├── SensorInterface/                
 │   ├── Command/RelayCommand.cs
-│   ├── Model/MainViewModel.cs      # MVVM + persistência SQLite local
+│   ├── Model/MainViewModel.cs      
 │   ├── ViewModels/BaseViewModel.cs
-│   ├── Views/MainWindow.xaml       # UI com DataGrid e estatísticas
+│   ├── Views/MainWindow.xaml      
 │   └── SensorInterface.csproj
 │
 ├── .gitignore

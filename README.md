@@ -5,18 +5,6 @@
 
 ---
 
-## Índice
-
-1. [Visão Geral](#visão-geral)
-2. [Arquitetura](#arquitetura)
-3. [Sinal Industrial Adicionado](#sinal-industrial-adicionado)
-4. [Configuração e Execução](#configuração-e-execução)
-5. [Documentação da API](#documentação-da-api)
-6. [Persistência de Dados](#persistência-de-dados)
-7. [Estrutura do Projeto](#estrutura-do-projeto)
-
----
-
 ## Visão Geral
 
 O SIMI é um sistema distribuído para monitoramento de sensores industriais em tempo real. Ele é composto por quatro componentes que se comunicam entre si:
